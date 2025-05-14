@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Fullscreen Image</title>
+ 
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.fullscreen-image {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.fullscreen-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Responsive font size */
+@media (max-width: 973px) {
+  .overlay-text h1 {
+    font-size: 1.5rem;
+  }
+  .fullscreen-image img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+    
+  </style>
+</head>
+<body>
+  <div class="fullscreen-image">
+    <img src="C:\xampp\htdocs\sample\test_size.png" alt="Responsive Banner Image">
+    <div class="overlay-text">
+      <h1>Explore the 120 year old legacy</h1>
+    </div>
+  </div>
+</body>
+</html>
